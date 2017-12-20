@@ -1,20 +1,20 @@
 ﻿@model IEnumerable<HR.DAL.DbLayer.JobTitle>
 
 @{
-    ViewBag.Title = "Должности";
+    ViewBag.Title = "Index";
 }
 
-<h2>Должности</h2>
+<h2>Items</h2>
 
 <p>
-    @Html.ActionLink("Новая Должность", "Edit", null,
+    @Html.ActionLink("Add new item", "Edit", null,
                 new { id="btnCreate", @class="btn btn-warning btn-sm"}
     )
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NameJobTitle)
+            @*@Html.DisplayNameFor(model => model.NameJobTitle)*@
         </th>
         <th></th>
     </tr>
@@ -26,10 +26,10 @@
                 @Html.DisplayFor(modelItem => item.NameJobTitle)
             </td>
             <td>
-                @Html.ActionLink("Корректировать", "Edit", new { id = item.JobTitleId }) 
+                @Html.ActionLink("Edit item", "Edit", new { id = item.JobTitleId }) 
 
               
-                @Html.ActionLink("Удалить", "Delete", new { id = item.JobTitleId })
+                @Html.ActionLink("Delete item", "Delete", new { id = item.JobTitleId })
             </td>
         </tr>
     }

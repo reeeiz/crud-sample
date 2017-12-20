@@ -17,7 +17,7 @@ namespace HR.DAL.DbLayer
     public class JobTitleMetadata
     {
         [Required(ErrorMessage = "Поле обязательно к заполнению!")]
-        [Display(Name ="Наименование должности")]
+        [Display(Name ="Name of item")]
         public string NameJobTitle { get; set; }
     }
 }
